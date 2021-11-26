@@ -1,6 +1,7 @@
 # PORTFOLIO
-Higemania's PORTFOLIO
+Higemania's Resonpsive Web PORTFOLIO
 
+* Mobile
 ![image](https://user-images.githubusercontent.com/60690630/143579540-a236685a-b565-4aa9-a244-b6191fd6b266.png)
 
 ![image](https://user-images.githubusercontent.com/60690630/143579643-f4283c5d-cf72-4500-afdf-734aaa68fb49.png)
