@@ -100,6 +100,7 @@ p {
 
 .section__container{
     max-width: 1200px;
+    margin: auto;
 }
 
 /* Navbar */
@@ -389,6 +390,7 @@ p {
 /* Testmonial */
 #testmonial{
     background-color: var(--color-light-white);
+    text-align: center;
 }
 
 .testmonials{
@@ -452,4 +454,5 @@ p {
 .contact__link i:hover{
     transform: scale(1.2);
     color: var(--color-yellow);
-}    
+}
+
