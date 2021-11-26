@@ -1,6 +1,14 @@
-let objToggleBtn = document.querySelector(".navbar__toggle-btn");
-let objMenu = document.querySelector(".navbar__menu");
+'use strinct'
 
-objToggleBtn.addEventListener("click", {
-    objMenu.classList.toggle('active');
+const navbar = document.querySelector("#navbar");
+
+document.addEventListener('scroll', ()=> {
+    let scrollY         = window.scrollY;
+    let navbarHeight    = navbar.getBoundingClientRect().height;
+
+    if(scrollY > navbarHeight){
+        navbar.classList.add('navbar--dark');
+    }else{
+        navbar.classList.remove('navbar--dark');
+    }
 });
