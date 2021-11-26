@@ -385,3 +385,45 @@ p {
     margin: 8px 0 0 -14px;
     background-color: var(--color-dark-white);
 }
+
+/* Testmonial */
+#testmonial{
+    background-color: var(--color-light-white);
+}
+
+.testmonials{
+    margin: 40px;
+}
+
+.testmonial{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.testmonial__avatar{
+    width: 150px;
+    border-radius: 50%;
+}
+
+.testmonial__avatar:nth-child(odd){
+    margin-right: 40px;
+}
+
+.testmonial__avatar:nth-child(even){
+    margin-left: 40px;
+}
+
+.testmonial__speech-bubble{
+    padding: 18px;
+    background-color: var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+
+.testmonial__speech-bubble p{
+    color: var(--color-light-grey);
+}
+
+.testmonial__speech-bubble a{
+    color: var(--color-pink);
+}
