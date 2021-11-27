@@ -340,6 +340,7 @@ p {
     position: relative;
     top: -20px;
     left: 4px;
+    pointer-events: none;
     opacity: 0;
     transition: all var(--animation-duration-default) ease;
 }
@@ -354,6 +355,13 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all var(--animation-duration-default) ease;
+}
+
+.work__projects.anime-out{
+    opacity: 0.5;
+    transform: scale(0.9);
 }
 
 .project{
@@ -365,6 +373,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.project.hide{
+    display: none;
 }
 
 .project__image{
