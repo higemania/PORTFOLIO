@@ -522,9 +522,44 @@ p {
 
 /* For below 768px */
 @media screen and (max-width: 768px){
+
+    :root {
+        /* Color */
+        --color-white: #ffffff;
+        --color-light-white: #eeeeee;
+        --color-dark-white: #bdbdbd;
+        --color-pink: #fe918d;
+        --color-dark-pink: #ff6863;
+        --color-dark-grey: #4d4d4d;
+        --color-grey: #616161;
+        --color-light-grey: #7c7979;
+        --color-blue: #73aace;
+        --color-yellow: #fff7d1;
+        --color-orange: #feb546;
+        --color-black: #000000;
+    
+        /* Font size */
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    
+        /* Font weight */
+        --wegiht-bold: 700;
+        --weight-semi-bold: 600;
+        --weight-regular: 400;
+    
+        /* Size */
+        --size-border-radius: 4px;
+    
+        /* Animation */
+        --animation-duration-default: 300ms;
+    }
+
     .navbar__toggle-btn{
         display: block;
-        top: 14px;
+        top: 10px;
     }
 
     #navbar{
@@ -567,9 +602,63 @@ p {
         flex-grow: 1;
     }
 
+    .testmonials{
+        margin:20px;
+    }
+
+    .testmonial{
+        margin:10px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin: 10px;
+    }
+    /* 정렬 순서 역전 시키기 */
+    .testmonial .testmonial__speech-bubble{
+        order: 1;
+    } 
+    /* .testmonial:nth-child(even){
+        flex-direction: column-reverse;
+    } */
+
     .testmonial__avatar{
         width:80px;
         height:80px;
+    }
+
+    .testmonial__avatar:nth-child(odd),
+    .testmonial__avatar:nth-child(even){
+        margin: 10px 10px;
+    }
+
+    .testmonial__speech-bubble{
+        padding: 5px;
+    }
+
+    .about__majors{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .jobs__logo{
+        width: 170px;
+    }
+
+    .section__container{
+        padding: 10px;
+    }
+
+    .job__description{
+        margin: 10px;
+    }
+
+    .category__btn{
+        padding: 8px 15px;
+        width: 180px;
+    }
+
+    .categoty__count{
+        right: 10px;
     }
 
 }
