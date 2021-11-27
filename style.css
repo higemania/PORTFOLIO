@@ -170,6 +170,13 @@ p {
     color: var(--color-white);
 }
 
+
+.home__avartar.fade,
+.home__title.fade,
+.home__description.fade{
+    opacity: 0;
+}
+
 .home__contact{
     font-size: var(--font-regular);
     font-weight: var(--wegiht-bold);
@@ -477,6 +484,23 @@ p {
     font-size: 24px;
     color: var(--color-white);
     display: none;
+}
+
+.arrow__up{
+    position:fixed;
+    font-size: var(--font-large);
+    right: 10px;
+    bottom: 10px;
+    color: var(--color-pink);
+    /* display: none; > DOM에서 사라지는거라 animation이 안됨*/
+    opacity: 0; /* for anymation */
+    pointer-events: none; /*opacity는 click이 가능... click 못하도록 처리*/
+    transition: all var(--animation-duration-default) ease;
+}
+
+.arrow__up.visible{
+    opacity: 1;
+    pointer-events: all;
 }
 
 /* For below 768px */
