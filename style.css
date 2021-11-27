@@ -126,8 +126,12 @@ p {
 
 .navbar__menu{
     display: flex;
-
 }
+
+.navbar__menu_list{
+    display: flex;
+}
+
 
 .navbar__logo{
     font-size: var(--font-medium);
@@ -139,6 +143,7 @@ p {
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
+    border:1px solid transparent;
     border-radius: var(--size-border-radius);
 }
 
@@ -404,7 +409,7 @@ p {
 }
 
 .project__description h3{
-    color: var(--color-dark-white);
+    color: var(--color-orange);
 } 
 
 .project__description h3:after{
@@ -412,9 +417,9 @@ p {
     display:block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 50px;
     height: 2px;
-    margin: 8px 0 0 -14px;
+    margin: 8px 0 0 -27px;
     background-color: var(--color-dark-white);
 }
 
@@ -519,12 +524,13 @@ p {
 @media screen and (max-width: 768px){
     .navbar__toggle-btn{
         display: block;
-        top: 20px;
+        top: 14px;
     }
 
     #navbar{
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-pink);
     }
 
     .navbar__menu{
@@ -532,9 +538,15 @@ p {
         flex-direction: column;
         align-items: center;
         width:100%;
+        background-color: var(--color-pink);
     }
 
-    .navbar__menu.active{
+    .navbar__menu_list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar__menu.open{
         display: block;
     }
 

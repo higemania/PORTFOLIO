@@ -9,7 +9,9 @@ const arrow_up          = document.querySelector('.arrow__up'               );
 const contact           = document.querySelector('#contact'                 );
 const work_categories   = document.querySelector('.work__categories'        );
 const work_projects     = document.querySelector('.work__projects'          );
-const project           = document.querySelectorAll('.project'                 );    
+const project           = document.querySelectorAll('.project'              );    
+const category_btn      = document.querySelectorAll('.category__btn'        );    
+const navbar_toggle_btn = document.querySelector('.navbar__toggle-btn'   );    
 
 let navbarHeight        = navbar.getBoundingClientRect().height;
 let homeHeight          = home_container.getBoundingClientRect().height;
@@ -45,7 +47,9 @@ document.addEventListener('scroll', ()=> {
 });
 //Menubar Scroll;
 navbarMenu.addEventListener('click', (e) => {
+    resetBtnActive(navbar_menu_item, e.target);
     scrollTo(e);
+    navbarMenu.classList.remove('open');
 });
 
 //contanct btn Scroll;
@@ -60,6 +64,8 @@ arrow_up.addEventListener('click', () => {
 
 //work_categories
 work_categories.addEventListener('click', (e) => {
+
+    resetBtnActive(category_btn, e.target);
 
     work_projects.classList.add('anime-out');
 
@@ -77,8 +83,14 @@ work_categories.addEventListener('click', (e) => {
  
 });
 
-let resetMenuBtn = (target) => {
-    navbar_menu_item.forEach((item)=>{
+//navbar_toggle_btn event add
+navbar_toggle_btn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+
+/* Active Button reset func */
+let resetBtnActive = (targetGroup, target) => {
+    targetGroup.forEach((item)=>{
         item.classList.remove('active');
     });
 
@@ -89,8 +101,6 @@ let scrollTo = (e) => {
     if(!e.target.dataset.link) {
         return;
     }
-
-    resetMenuBtn(e.target);
 
     let target_section = document.querySelector(e.target.dataset.link);
     let section_top    = target_section.offsetTop - navbar.getBoundingClientRect().height;
