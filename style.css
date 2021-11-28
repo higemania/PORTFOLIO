@@ -192,6 +192,10 @@ p {
     color: var(--color-white);
 }
 
+.home__contact:hover{
+    background-color: var(--color-orange);
+}
+
 /* About Me */
 .about__majors{
     display: flex;
@@ -656,9 +660,4 @@ p {
         padding: 8px 15px;
         width: 180px;
     }
-
-    .categoty__count{
-        right: 10px;
-    }
-
 }

@@ -12,10 +12,13 @@ const work_projects     = document.querySelector('.work__projects'          );
 const project           = document.querySelectorAll('.project'              );    
 const category_btn      = document.querySelectorAll('.category__btn'        );    
 const navbar_toggle_btn = document.querySelector('.navbar__toggle-btn'   );    
+const sections          = document.querySelectorAll('section'         );    
+const sectionIds        = Array.from(sections).map((elem)=> `${elem.id}`);
 
 let navbarHeight        = navbar.getBoundingClientRect().height;
 let homeHeight          = home_container.getBoundingClientRect().height;
 let contactTop          = contact.offsetTop;
+let selectedNavIdx      = 0;
 
 //Navbar Control
 document.addEventListener('scroll', ()=> {
@@ -107,3 +110,44 @@ let scrollTo = (e) => {
 
     window.scrollTo( {top: section_top, left: 0, behavior: 'smooth'} );
 }
+
+const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+        if(!entry.isIntersecting && entry.intersectionRatio > 0){
+
+            selectedNavIdx = sectionIds.indexOf(`${entry.target.id}`);
+            console.log(`>>>>>>> selectedNavIdx : ${selectedNavIdx}`);            
+
+            if(entry.boundingClientRect.y > 0){
+                selectedNavIdx--;
+            }else{
+                selectedNavIdx++;
+            }
+        }
+    });
+};
+
+const options = {
+    root: null, //viewport
+    rootMargin: '0px', // +- margin  > 미리 근접할때 준비해 놓겠다...css사용법과 동일
+    threshold: 0.2 //0~1(100%) 몇 % 들어왔을때 실행 할까나?(Default 0);
+};
+
+const observer          = new IntersectionObserver(callback, options);
+
+sections.forEach((section)=>{
+    observer.observe(section);
+});
+
+
+window.addEventListener('wheel', ()=>{
+
+    if(window.scrollY === 0){
+        selectedNavIdx = 0;
+
+    }else if(window.scrollY + window.innerHeight > (document.body.clientHeight*0.99)){
+        selectedNavIdx = navbar_menu_item.length - 1;
+    }
+
+    resetBtnActive(navbar_menu_item, navbar_menu_item.item(selectedNavIdx));
+});
