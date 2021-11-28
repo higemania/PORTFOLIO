@@ -57,11 +57,14 @@ navbarMenu.addEventListener('click', (e) => {
 
 //contanct btn Scroll;
 home_contact.addEventListener('click', (e) => {
+    const idx = sectionIds.indexOf(e.target.dataset.link.replace("#",""));
+    resetBtnActive(navbar_menu_item, navbar_menu_item.item(idx));
     scrollTo(e);
 });
 
 //Arrow Up Scroll;
 arrow_up.addEventListener('click', () => {
+    resetBtnActive(navbar_menu_item, navbar_menu_item.item(0));
     window.scrollTo( {top: 0, left: 0, behavior: 'smooth'} );
 });
 

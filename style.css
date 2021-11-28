@@ -240,13 +240,17 @@ p {
     justify-content:left;
 }
 
+.job.etc{
+    justify-content: center;
+}
+
 .job__description{
     text-align: left;
     margin: 0 60px;
 }
 
 .jobs__logo{
-    min-width:170px;
+    min-width:120px;
 }
 
 .jobs__name,
@@ -642,10 +646,6 @@ p {
     .about__majors{
         margin-top: 20px;
         margin-bottom: 20px;
-    }
-
-    .jobs__logo{
-        width: 170px;
     }
 
     .section__container{
