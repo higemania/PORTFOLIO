@@ -27,7 +27,7 @@
                 <li class="navbar__menu__item" data-link="#about">About</li>
                 <li class="navbar__menu__item" data-link="#skills">Skills</li>
                 <li class="navbar__menu__item" data-link="#works">My Work</li>
-                <li class="navbar__menu__item" data-link="#testmonial">Testmonial</li>
+                <!-- <li class="navbar__menu__item" data-link="#testmonial">Testmonial</li> -->
                 <li class="navbar__menu__item" data-link="#contact">Contact</li>
             </ul>
         </div>
@@ -58,7 +58,7 @@
             <div class="major">
                 <div class="major__icon"><i class="fab fa-html5"></i></div>
                 <h2 class="major__title">Front-end</h2>
-                <div class="major__description">HTML5, CSS3, ECMA Script,<br/> REACT, Flex, RCP <br/> TrustFrom, MiPlatform, X-Platform, Nexacro</div>
+                <div class="major__description">HTML5, CSS3, SCSS<br/> React, Vue, Nuxt.js, ES6+<br/> TrustFrom, MiPlatform, X-Platform, Nexacro</div>
             </div>
             <div class="major">
                 <div class="major__icon"><i class="fas fa-server"></i></div>
@@ -68,20 +68,27 @@
             <div class="major">
                 <div class="major__icon"><i class="fas fa-database"></i></div>
                 <h2 class="major__title">Database</h2>
-                <div class="major__description">Oracle, DB2, MariaDB, MySQL, MS-SQL, PostgreSQL</div>
+                <div class="major__description">Oracle, DB2, MariaDB, MS-SQL, PostgreSQL</div>
             </div>
             <div class="major">
                 <div class="major__icon"><i class="fab fa-osi"></i></div>
                 <h2 class="major__title">ETC</h2>
-                <div class="major__description">JPA, QueryDSL, MyBatis, Docker, Kafka, ActiveMQ, Infinispan, ELK stack, RESTful API, MSA, AWS</div>
+                <div class="major__description">JPA, QueryDSL, MyBatis, Docker, Kafka,  ELK stack, RESTful API, Swagger, MSA, AWS, GCP</div>
             </div>
         </div>   
         <div class="about__jobs">
             <div class="job">
+                <img src="./imgs/jobs/homin.png" alt="LG U+ Homin Platform" class="jobs__logo">
+                <div class="job__description">
+                    <p class="jobs__name">Currently Working at LG U+ HOMIN Platform in charge of Front-end developer mainly.</p>
+                    <p class="jobs__period">2022.01 ~ Until now</p>
+                </div>
+            </div>
+            <div class="job">
                 <img src="./imgs/jobs/aia-life-insureance-logo.png" alt="AIA Life Insurance" class="jobs__logo">
                 <div class="job__description">
-                    <p class="jobs__name">Currently Working at AIA Life Insurance in charge of channel contract system part.</p>
-                    <p class="jobs__period">2021.01 ~ Until now</p>
+                    <p class="jobs__name">Working at AIA Life Insurance in charge of channel contract system part.</p>
+                    <p class="jobs__period">2021.01 ~ 2021.12</p>
                 </div>
             </div>
             <div class="job">
@@ -146,7 +153,7 @@
                     </div>
                     <div class="skill">
                         <div class="skill__description">
-                            <span>Javascript</span>
+                            <span>Javascript [ ES6+ ]</span>
                             <span>80%</span>
                         </div>
                         <div class="skill__bar">
@@ -183,10 +190,28 @@
                     <div class="skill">
                         <div class="skill__description">
                             <span>React</span>
-                            <span>60%</span>
+                            <span>70%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill__value" style="width: 60%;"></div>
+                            <div class="skill__value" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>Vue</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>Nuxt.js</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 80%;"></div>
                         </div>
                     </div>
                     <div class="skill">
@@ -230,8 +255,8 @@
                     <div class="tools">
                         <h3 class="skillset__title">Tools</h3>
                         <ul class="tools__list">
-                            <li><span>Visual Studio Code</span></li>
-                            <li><span>Eclipse/Spring Tool Suites</span></li>
+                            <li><span>VS Code</span></li>
+                            <li><span>Spring Tool Suites</span></li>
                             <li><span>IntelliJ</span></li>
                             <li><span>DBeaver</span></li>
                             <li><span>Toad</span></li>
@@ -244,10 +269,12 @@
                     <div class="etc">
                         <h3 class="skillset__title">Etc</h3>
                         <ul class="etc__list">
-                            <li><span>Git/Svn/Serena</span></li>
-                            <li><span>Jira/Azure</span></li>
+                            <li><span>GitLab/GitHub/Svn/Serena</span></li>
+                            <li><span>Jira/Confluence</span></li>
+                            <li><span>Azure</span></li>
                             <li><span>Jenkins</span></li>
                             <li><span>Maven/Gradle</span></li>
+                            <li><span>NPM</span></li>
                         </ul>
                     </div>
                 </div>
@@ -260,74 +287,74 @@
             <h1>My Works</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn active" data-btn_type="*">All<span class="categoty__count">8</span></button>
-                <button class="category__btn" data-btn_type="F">Front-end<span class="categoty__count">4</span></button>
-                <button class="category__btn" data-btn_type="B">Back-end<span class="categoty__count">3</span></button>
+                <button class="category__btn active" data-btn_type="*">All<span class="categoty__count">5</span></button>
+                <button class="category__btn" data-btn_type="F">Desktop<span class="categoty__count">4</span></button>
+                <!-- <button class="category__btn" data-btn_type="B">Back-end<span class="categoty__count">3</span></button> -->
                 <button class="category__btn" data-btn_type="M">Mobile<span class="categoty__count">1</span></button>
             </div>
             <div class="work__projects">
-                <a href="" class="project" target="blank" data-project_type="F">
-                    <img src="./imgs/projects/project1.png" alt="example" class="project__image">
+                <a href="https://lghomin.com/" class="project" target="blank" data-project_type="F">
+                    <img src="./imgs/projects/homin_desktop.png" alt="example" class="project__image">
                     <div class="project__description">
-                        <h3>Youtube Site</h3>
-                        <span>Clone coding with HTML and CSS</span>
+                        <h3>Homin Platform</h3>
+                        <span>Vue and Nuxt.js with SCSS</span>
                     </div>
                 </a>
-                <a href="" class="project" target="blank" data-project_type="F">
-                    <img src="./imgs/projects/project2.png" alt="example" class="project__image">
+                <a href="https://imap.aia.co.kr/NBSE/DMAPP/dmapp.html" class="project" target="blank" data-project_type="F">
+                    <img src="./imgs/projects/dmapp_desktop.png" alt="example" class="project__image">
                     <div class="project__description">
-                        <h3>Youtube Site</h3>
-                        <span>Clone coding with HTML and CSS</span>
+                        <h3>DMAPP</h3>
+                        <span>DMAPP new contract system with Nexacro</span>
                     </div>
                 </a>
-                <a href="" class="project" target="blank" data-project_type="F">
+                <a href="#" class="project" target="blank" data-project_type="F">
                     <img src="./imgs/projects/project3.png" alt="example" class="project__image">
                     <div class="project__description">
-                        <h3>Youtube Site</h3>
-                        <span>Clone coding with HTML and CSS</span>
+                        <h3>Smart Script</h3>
+                        <span>Smart Script System with JQuery</span>
                     </div>
                 </a>
-                <a href="" class="project" target="blank" data-project_type="F">
+                <a href="#" class="project" target="blank" data-project_type="F">
                     <img src="./imgs/projects/project4.png" alt="example" class="project__image">
                     <div class="project__description">
-                        <h3>Youtube Site</h3>
-                        <span>Clone coding with HTML and CSS</span>
+                        <h3>Terminal IOT DashBoard</h3>
+                        <span>Terminal IOT DashBoard with React</span>
                     </div>
                 </a>
-                <a href="" class="project" target="blank" data-project_type="B">
-                    <img src="./imgs/projects/project5.png" alt="example" class="project__image">
+                <!-- <a href="https://lghomin.com/" class="project" target="blank" data-project_type="B">
+                    <img src="./imgs/projects/homin.png" alt="example" class="project__image">
                     <div class="project__description">
-                        <h3>Youtube Site</h3>
-                        <span>Clone coding with HTML and CSS</span>
+                        <h3>Homin Platform</h3>
+                        <span>Homin Platform with Spring boot and MSA</span>
                     </div>
                 </a>
-                <a href="" class="project" target="blank" data-project_type="B">
-                    <img src="./imgs/projects/project6.png" alt="example" class="project__image">
+                <a href="#" class="project" target="blank" data-project_type="B">
+                    <img src="./imgs/projects/dmapp_desktop.png" alt="example" class="project__image">
                     <div class="project__description">
-                        <h3>Youtube Site</h3>
-                        <span>Clone coding with HTML and CSS</span>
+                        <h3>DMAPP</h3>
+                        <span>Intelligence Contract System(DMAPP) with Proframe</span>
                     </div>
                 </a>
-                <a href="" class="project" target="blank" data-project_type="B">
+                <a href="#" class="project" target="blank" data-project_type="B">
                     <img src="./imgs/projects/project7.png" alt="example" class="project__image">
                     <div class="project__description">
-                        <h3>Youtube Site</h3>
-                        <span>Clone coding with HTML and CSS</hspan3>
+                        <h3>TIOT Platform(public access not provide)</h3>
+                        <span>TIOT Platform Service with Spring boot and MSA</hspan3>
                     </div>
-                </a>
-                <a href="" class="project" target="blank" data-project_type="M">
-                    <img src="./imgs/projects/project8.png" alt="example" class="project__image">
+                </a> -->
+                <a href="https://lghomin.com/" class="project" target="blank" data-project_type="M">
+                    <img src="./imgs/projects/homin_mobile.png" alt="example" class="project__image">
                     <div class="project__description">
-                        <h3>Youtube Site</h3>
-                        <span>Clone coding with HTML and CSS</span>
+                        <h3>Homin Platform</h3>
+                        <span>Vue and Nuxt.js with SCSS</span>
                     </div>
                 </a>
             </div>
         </div>    
     </section>
 
-    <!--  testmonial section -->
-    <section id="testmonial" class="section">
+    <!--  testmonial section 잠시 봉인...-->
+    <!-- <section id="testmonial" class="section">
         <div class="section__container">
             <h1>Testmonial</h1>
         <h3>See What Say About me</h3>
@@ -348,7 +375,7 @@
             </div>
         </div> 
         </div>
-    </section>
+    </section> -->
     <!--  contact section -->
     <section id="contact" class="section">
         <h1 class="contact__title">Let's Talk</h1>
